@@ -73,7 +73,7 @@ public class Map {
 				Pokemon wildPokemon = (Pokemon) ground[nx][ny];
 				System.out.println("\n\n\n"+wildPokemon.getName() + "이(가) 있습니다!!");
 				if (((Player) ground[curr_x][curr_y]).ballThrow(wildPokemon)) {
-					eventMessage = wildPokemon.getName() + "을(를) 잡았습니다!";
+					//eventMessage = wildPokemon.getName() + "을(를) 잡았습니다!";
 					ground[nx][ny] = null;
 				}
 			}

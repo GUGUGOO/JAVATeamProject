@@ -34,21 +34,21 @@ public class Squirtle extends Pokemon{
 	public void skill2(Pokemon pokemon) {
 		System.out.println("*"+this.getName()+"가 물대포를 "+pokemon.getName()+"에게 사용했습니다 ");
 		pokemon.setHP(pokemon.getHP() - 20);
-		System.out.println("※"+pokemon.getName()+"의 HP가 -10만큼 떨어졌습니다");
+		System.out.println("※"+pokemon.getName()+"의 HP가 -20만큼 떨어졌습니다");
 		
 	}
 	@Override
 	public void skill3(Pokemon pokemon) {
 		System.out.println("*"+this.getName()+"가 파도타기를 "+pokemon.getName()+"에게 사용했습니다 ");
 		pokemon.setHP(pokemon.getHP() - 30);
-		System.out.println("※"+pokemon.getName()+"의 HP가 -10만큼 떨어졌습니다");
+		System.out.println("※"+pokemon.getName()+"의 HP가 -30만큼 떨어졌습니다");
 		
 	}
 	@Override
 	public void skill4(Pokemon pokemon) {
 		System.out.println("*"+this.getName()+"가 하이드로펌프를 "+pokemon.getName()+"에게 사용했습니다 ");
 		pokemon.setHP(pokemon.getHP() - 40);
-		System.out.println("※"+pokemon.getName()+"의 HP가 -10만큼 떨어졌습니다");
+		System.out.println("※"+pokemon.getName()+"의 HP가 -40만큼 떨어졌습니다");
 		
 	}
 

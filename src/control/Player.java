@@ -154,7 +154,6 @@ public class Player {
 	}
 		
 		
-	
 	public void feed(Pokemon pokemon) {
 		System.out.println("*"+pokemon.getName()+"의 HP를 20 증가시킵니다.");
 		pokemon.setHP(pokemon.getHP()+20);
@@ -175,30 +174,36 @@ public class Player {
 
 		boolean result;
 		
-		while(ball > 0) {
-			int random = (int)(Math.random()*10);
-			System.out.println("*포켓볼을 던집니다(현재보유한 포켓볼"+this.ball+"개중 1개의 포켓볼을 사용합니다) ");
-			if(random > 2) {
-				//System.out.println("*"+pokemon.getClass().toString().split(" ")[1]+"을 잡았습니다.");
-				//System.out.println("*"+ pokemon.getName() + "을(를) 잡았습니다.");
-				pokemons.add(pokemon);
-				this.ball--;
-				//System.out.println("*현재보유한 포켓볼"+this.ball+"개");
-				result=true;
-				break;
-			}else {
-				System.out.println("*"+pokemon.getName()+"잡기에 실패했습니다.");
-				System.out.println("*다시잡으시겠습니까??(숫자를 입력해주세요)\n1.잡기 2.포기하기");
-				Scanner sc = new Scanner(System.in);
-				this.ball--;
-				int select = sc.nextInt();
-				if(select == 1) {
-					continue;
+		if(this.ball <= 0) {
+			System.out.println("포켓볼이 없습니다ㅠㅠ " + pokemon.getName() + "을(를) 놓쳤습니다.");
+			result = false;
+		}
+		else {
+			while(ball > 0) {
+		
+				int random = (int)(Math.random()*10);
+				System.out.println("*포켓볼을 던집니다(현재보유한 포켓볼"+this.ball+"개중 1개의 포켓볼을 사용합니다) ");
+				if(random > 2) {
+					//System.out.println("*"+pokemon.getClass().toString().split(" ")[1]+"을 잡았습니다.");
+					System.out.println("*"+ pokemon.getName() + "을(를) 잡았습니다.");
+					pokemons.add(pokemon);
+					this.ball--;
+					//System.out.println("*현재보유한 포켓볼"+this.ball+"개");
+					result=true;
+					break;
 				}else {
-					result= false;
+					System.out.println("*"+pokemon.getName()+"잡기에 실패했습니다.");
+					System.out.println("*다시잡으시겠습니까??(숫자를 입력해주세요)\n1.잡기 2.포기하기");
+					Scanner sc = new Scanner(System.in);
+					this.ball--;
+					int select = sc.nextInt();
+					if(select == 1) {
+						continue;
+					}else {
+						result= false;
+					}
 				}
 			}
-			
 		}
 		if(result=true) {
 			return true;

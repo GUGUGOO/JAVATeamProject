@@ -68,7 +68,7 @@ public class Gym {
 						System.out.println("****"+player.getName()+"의"+mine.getName()+"이(가) 졌습니다.");
 						
 						//player.getPokemons().remove(i);
-						System.out.println(player.getPokemons().size());
+						//System.out.println(player.getPokemons().size());
 						if(i < player.getPokemons().size()-1) {
 							i++;
 							continue;

@@ -9,7 +9,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		String arrow;
 		Map map = new Map(6, 6);
-		Player player = new Player("ÇüÂÞ´Ï", 100, 5, map.getX() - 1, map.getY() - 1);
+		Player player = new Player("ÇüÂÞ´Ï", 100, 4, map.getX() - 1, map.getY() - 1);
 		player.selectInitialPokemon();
 		Player boss_1 = new Player("Áö¿ì", 0, 0, 0, 0);	
 		boss_1.addPokemon(new Squirtle("²¿ºÎ±â", 100, 0, 100, 100, 1));
